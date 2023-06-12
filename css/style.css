@@ -50,6 +50,9 @@ body{
     color: #0ef;
 }
 
+/*FIN DEL FOOTER*/
+/*INICIO DE MAIN*/
+
 .home{
     position: relative;
     width: 100%;
@@ -145,6 +148,12 @@ body{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
     0 0 100px cyan, 0 0 200px cyan
+}
+
+.home .img-yo{
+    height: 400px;
+    width: 400px;
+    border-radius: 20%;
 }
 
 @keyframes slideRight{
