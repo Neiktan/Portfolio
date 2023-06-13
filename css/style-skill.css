@@ -11,7 +11,6 @@ body{
 }
 
 .header{
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -42,10 +41,62 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
+    opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover{
     color: #0ef;
+}
+
+/**/
+
+.section-web, .section-cyber{
+    background-color: red;
+    text-align: center;
+}
+
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

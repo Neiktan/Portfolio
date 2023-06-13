@@ -10,7 +10,7 @@ body{
 }
 
 .header{
-    position: fixed;
+    position: fixed; /*eso hace que no se crea una caja*/
     top: 0;
     left: 0;
     width: 100%;
