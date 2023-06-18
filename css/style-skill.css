@@ -7,7 +7,7 @@
 
 body{
     color: white;
-    background-color: #022072;
+    background-color: #012777;
 }
 
 .header{
@@ -50,12 +50,40 @@ body{
     color: #0ef;
 }
 
-/**/
+/*BODY*/
+
+.web article{
+    margin: 10px 20px;
+}
+
+.cybersecurity article{
+    margin: 10px 20px;
+}
 
 .section-web, .section-cyber{
     background-color: red;
     text-align: center;
 }
+
+.stuff-web{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+/*MEDIA*/
+
+@media (max-width: 1439px) {
+    .stuff-web{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
 
 @keyframes slideRight{
     0% {
