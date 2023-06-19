@@ -7,7 +7,8 @@
 
 body{
     color: white;
-    background-color: #022072;
+    background: rgb(2,0,36);
+    background: linear-gradient(172deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
 .header{
@@ -49,6 +50,24 @@ body{
 
 .navbar a:hover{
     color: #0ef;
+}
+
+/*BODY*/
+.top-about{
+    text-align: center;
+}
+
+.yo-about{
+    height: 400px;
+    width: 400px;
+    border-radius: 20%;
+}
+
+.flex-about{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
 
 @keyframes slideRight{

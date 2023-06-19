@@ -58,9 +58,8 @@ body{
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(../images/background2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(172deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
@@ -137,7 +136,6 @@ body{
     color: #081b29;
     letter-spacing: none;
     font-weight: 600;
-
     animation: slideTop 1s ease forwards;
     animation: 2s;
     box-shadow: 0 0 5px #0ef,
@@ -154,6 +152,9 @@ body{
     height: 400px;
     width: 400px;
     border-radius: 20%;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 
 @keyframes slideRight{
