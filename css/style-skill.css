@@ -7,8 +7,7 @@
 
 body{
     color: white;
-    background: rgb(2,0,36);
-    background: linear-gradient(172deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: #181818;
 }
 
 .header{
@@ -48,7 +47,7 @@ body{
 }
 
 .navbar a:hover{
-    color: #0ef;
+    color: red;
 }
 
 /*BODY*/
@@ -64,6 +63,16 @@ body{
 .section-web, .section-cyber{
     background-color: red;
     text-align: center;
+}
+
+.text-skill{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bootstrap-icon, .virtual, .nmap, .phistool{
+    width: 40px;
+    height: 40px;
 }
 
 .stuff-web{

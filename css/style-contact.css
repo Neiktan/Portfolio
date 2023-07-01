@@ -7,8 +7,7 @@
 
 body{
     color: #ededed;
-    background: rgb(2,0,36);
-    background: linear-gradient(172deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: #181818;
 }
 
 .header{
@@ -55,6 +54,14 @@ body{
 
 .shadow-contact{
     box-shadow: 0 0 20px 0 white;
+    margin: 4em 1.5em; /*Esto hace el margen del cuadro*/
+}
+
+.info-contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
 }
 
 @keyframes slideRight{
