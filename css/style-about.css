@@ -1,16 +1,44 @@
-*{
+/* =====================================
+   GLOBAL RESET & BASE TYPOGRAPHY
+   ===================================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    color: white;
-    background: #181818;
+/* =====================================
+   THEME SYSTEM (LIGHT / DARK)
+   ===================================== */
+
+:root {
+    --bg-color: #ffffff;        /* default light background */
+    --text-color: #111111;      /* default dark text */
+    --accent-color: #ff1744;    /* neon red accent */
+    --accent-contrast: #050509; /* contrast for accent backgrounds */
+    --card-bg: #f5f5f5;         /* light card background */
 }
 
-.header{
+/* Dark mode overrides */
+body.dark-mode {
+    --bg-color: #181818;
+    --text-color: #ededed;
+    --card-bg: #111111;
+}
+
+/* Apply theme variables */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* =====================================
+   HEADER & NAVIGATION
+   ===================================== */
+
+.header {
     top: 0;
     left: 0;
     width: 100%;
@@ -22,77 +50,167 @@ body{
     z-index: 100;
 }
 
-
-.logo{
+.logo {
     position: relative;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     cursor: default;
     opacity: 0;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
+    transition: 0.3s;
     opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover{
-    color: rgb(212, 212, 42);
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(255, 23, 68, 0.8);
 }
 
-/*BODY*/
-.top-about{
+/* Theme toggle button (light/dark mode) */
+.theme-toggle {
+    margin: 0 1rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(255, 23, 68, 0.9);
+    transform: translateY(-1px);
+}
+
+/* =====================================
+   ABOUT PAGE LAYOUT
+   ===================================== */
+
+/* Top title / heading */
+.top-about {
     text-align: center;
 }
 
-.yo-about{
+/* About image */
+.yo-about {
     height: 400px;
     width: 400px;
     border-radius: 20%;
 }
 
-.flex-about{
+/* Flex container for image + text */
+.flex-about {
     margin: 20px 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
 }
 
-.info-about{
-    margin: 10px 15px 0px 20px;
+/* Text box beside the image */
+.info-about {
+    margin: 10px 15px 0 20px;
 }
 
-/*MEDIA*/
-@media (max-width: 450px) {
-    .yo-about{
-        height: 200px;
-        width: 200px;
-    }
-    .flex-about{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .yo-about2{
-        display: flex;
-        justify-content: center;
-    }
+/* Wrapper used in mobile layout for centering image */
+.yo-about2 {
+    display: flex;
+    justify-content: center;
 }
 
+/* =====================================
+   REUSABLE COMPONENTS
+   ===================================== */
 
-/*KEYFRAMES*/
+/* Generic cards / sections background */
+.card,
+.info-about,
+.section,
+.section-skill,
+.section-contact,
+.main-contact,
+.main-skill {
+    background: var(--card-bg);
+    border-radius: 12px;
+}
 
-@keyframes slideRight{
+/* Main button style (if used in About page) */
+.btn-box {
+    border: 2px solid var(--accent-color);
+    background: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 23, 68, 0.85);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 999px;
+    display: inline-block;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-box:hover {
+    background: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 23, 68, 0.95);
+    transform: translateY(-1px);
+}
+
+/* Social icons (if reused here) */
+.home-sci a {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+    box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
+}
+
+.home-sci a:hover {
+    background: var(--accent-color);
+    color: var(--accent-contrast);
+    box-shadow: 0 0 22px rgba(255, 23, 68, 0.95);
+    transform: translateY(-2px);
+}
+
+/* Headings look slightly glowing */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-color);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================
+   ANIMATIONS
+   ===================================== */
+
+@keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
@@ -103,7 +221,7 @@ body{
     }
 }
 
-@keyframes slideLeft{
+@keyframes slideLeft {
     0% {
         transform: translateX(100px);
         opacity: 0;
@@ -114,7 +232,7 @@ body{
     }
 }
 
-@keyframes slideTop{
+@keyframes slideTop {
     0% {
         transform: translateY(100px);
         opacity: 0;
@@ -125,7 +243,7 @@ body{
     }
 }
 
-@keyframes slideBottom{
+@keyframes slideBottom {
     0% {
         transform: translateY(-100px);
         opacity: 0;
@@ -133,5 +251,25 @@ body{
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 450px) {
+    .yo-about {
+        height: 200px;
+        width: 200px;
+    }
+
+    .flex-about {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .info-about {
+        margin: 10px 15px 20px 15px;
     }
 }

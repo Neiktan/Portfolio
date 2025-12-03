@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,16 @@
     <!--boxicons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <header class="header">
         <a href="../index.html" class="logo">Portfolio</a>
 
+        <button id="theme-toggle" class="theme-toggle">Dark mode</button>
+
         <nav class="navbar">
-            <a href="../index.html" style="--i:1" class="active">Home</a>
-            <a href="./about.html" style="--i:2">About</a>
+            <a href="../index.html" style="--i:1">Home</a>
+            <a href="./about.html" style="--i:2" class="active">About</a>
             <a href="./skill.html" style="--i:3">Skill</a>
             <a href="./contact.html" style="--i:4">Contact</a>
         </nav>
@@ -33,19 +37,57 @@
                 </div>
                 <div class="flex-about">
                     <div class="info-about">
-                        <div>
-                            <h2>Hello everyone!!!</h2>
-                            <h3>I am Luis Gamino, Mexican, 23 years old</h3>
-                            <h4>I am Web Developer JR and I really like to be into the world of programming.</h4>
-                            <h5>I like the world of Coding and Computer/Internet.</h5>
-                            <h5>I get my certificate of Web Developer (Frontend) and Cybersecurity, and I have a plan to get more certificates for:</h5>
+                        <div class="about-text">
+                            <h2>Hello everybody, I am Luis Gamino</h2>
+
+                            <p>
+                                Technology isn’t just my field of study—it’s my passion. From coding and software
+                                development
+                                to troubleshooting hardware issues, I thrive on solving complex problems and discovering
+                                new possibilities.
+                            </p>
+
+                            <p>
+                                I am currently pursuing a degree in Programming and Software Development at Navarro
+                                College, and I have
+                                earned certifications in Web Development (Frontend), Cybersecurity, and IT. My
+                                experience goes beyond coursework—
+                                I actively assist colleagues with hardware and software troubleshooting, fixing program
+                                errors, resolving
+                                technical questions, and repairing devices like printers, monitors, and peripherals.
+                                These hands-on experiences
+                                have strengthened my problem-solving skills and deepened my enthusiasm for IT.
+                            </p>
+
+                            <p>
+                                I enjoy experimenting with emerging technologies, both in hardware and software, to
+                                understand how things work
+                                and push the boundaries of innovation. Whether it's fixing a printer, optimizing code,
+                                or developing a web
+                                application, I see every challenge as an opportunity to grow.
+                            </p>
+
+                            <h3>Technologies & Skills</h3>
                             <ul>
-                                <li>Design 3D (Blender)</li>
-                                <li>Backend</li>
-                                <li>React Js</li>
-                                <li>Python</li>
-                                <li>etc....</li>
+                                <li><strong>Languages & Frameworks:</strong> JavaScript, C, SASS, HTML, CSS, Bootstrap
+                                </li>
+                                <li><strong>Tools & Platforms:</strong> Git, Linux, Docker</li>
+                                <li><strong>Current Learning Goals:</strong> 3D Design (Blender), Backend Development,
+                                    React.js, Python</li>
                             </ul>
+
+                            <p>
+                                I am always eager to learn and collaborate on innovative projects. If you’re looking for
+                                a developer with a passion
+                                for technology and problem-solving, let’s connect!
+                            </p>
+
+                            <p>
+                                📂 <strong>Explore my work:</strong>
+                                <a href="https://github.com/Neiktan/Portfolio_Gamino" target="_blank">
+                                    GitHub Portfolio
+                                </a>
+                            </p>
                         </div>
                         <div>
                             <div>
@@ -53,11 +95,16 @@
                                 <ul>
                                     <li>Web Development</li>
                                     <li>CiberSecurity</li>
+                                    <li>IT Support</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3>Education</h3>
-                            <h5><a href="https://us.coderhouse.com/?gclid=Cj0KCQjw7PCjBhDwARIsANo7CgnxFVBFMwMTrqJiRH0tmqbfrfE6BpTmC1TlcY01DsF8TCpEncPloeEaAnJyEALw_wcB" target="_blank">CoderHouse</a></h5>
+                                <ul>
+                                    <li><a href="https://us.coderhouse.com/?gclid=Cj0KCQjw7PCjBhDwARIsANo7CgnxFVBFMwMTrqJiRH0tmqbfrfE6BpTmC1TlcY01DsF8TCpEncPloeEaAnJyEALw_wcB"
+                                        target="_blank">CoderHouse</a></li>
+                                    <li><a href="https://www.navarrocollege.edu/" target="_blank">Navarro College</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -76,22 +123,12 @@
                         <use xlink:href="#bootstrap"></use>
                     </svg>
                 </a>
-                <span class="mb-3 mb-md-0">© 2023 Luis Gamino</span>
+                <span class="mb-3 mb-md-0">© 2025 Luis Gamino</span>
             </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
-            </ul>
         </footer>
     </div>
+    <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

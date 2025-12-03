@@ -1,16 +1,49 @@
-*{
+/* =====================================
+   GLOBAL RESET & BASE TYPOGRAPHY
+   ===================================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    color: #ededed;
-    background: #181818;
+/* =====================================
+   THEME SYSTEM (LIGHT / DARK)
+   ===================================== */
+
+:root {
+    --bg-color: #ffffff;
+    /* default light background */
+    --text-color: #111111;
+    /* default dark text */
+    --accent-color: #ff1744;
+    /* neon red accent */
+    --accent-contrast: #050509;
+    /* contrast color for accent background */
+    --card-bg: #f5f5f5;
+    /* light card/background */
 }
 
-.header{
+/* Dark theme overrides */
+body.dark-mode {
+    --bg-color: #181818;
+    --text-color: #ededed;
+    --card-bg: #111111;
+}
+
+/* Apply theme variables */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* =====================================
+   HEADER & NAVIGATION
+   ===================================== */
+
+.header {
     top: 0;
     left: 0;
     width: 100%;
@@ -22,131 +55,112 @@ body{
     z-index: 100;
 }
 
-.logo{
+.logo {
     position: relative;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     cursor: default;
     opacity: 0;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
     display: inline-block;
     font-size: 25px;
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
+    transition: 0.3s;
     opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover{
-    color: #0ef;
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(255, 23, 68, 0.8);
 }
 
-/*FIN DEL FOOTER*/
-/*INICIO DE MAIN*/
+/* Theme toggle button (light/dark mode) */
+.theme-toggle {
+    margin: 0 1rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    white-space: nowrap;
+}
 
-.home{
+.theme-toggle:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(255, 23, 68, 0.9);
+    transform: translateY(-1px);
+}
+
+/* =====================================
+   HOME SECTION
+   ===================================== */
+
+.home {
     position: relative;
     width: 100%;
-    justify-content: space-between;
     height: 90vh;
-    display: flex;
-    align-items: center;
     padding: 10px 10% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.home-content{
+.home-content {
     max-width: 600px;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
-    animation-delay: .7s;
+    animation-delay: 0.7s;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
-    animation-delay: .7s
+    animation-delay: 0.7s;
 }
 
-.home-content h3 span{
-    color: #0ef;
+.home-content h3 span {
+    color: var(--accent-color);
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
-    margin: -3px  0;
+    margin: -3px 0;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
 
-.home-content p{
+.home-content p {
     font-size: 20px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
 
-.home-sci a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #0ef;
-    border-radius: 20px;
-    color: #0ef;
-    text-decoration: none;
-    transition: .5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2 * var(--i));
-    margin: 30px 15px 30px 0;
-}
-
-.home-sci a:hover{
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;
-}
-
-.btn-box{
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    letter-spacing: none;
-    font-weight: 600;
-    animation: slideTop 1s ease forwards;
-    animation: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef;
-}
-
-.btn-box:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan
-}
-
-.home .img-yo{
+/* Home image */
+.home .img-yo {
     height: 400px;
     width: 400px;
     border-radius: 20%;
@@ -155,62 +169,152 @@ body{
     animation-delay: 1s;
 }
 
-@media (max-width: 500px) {
-    .home{
-        height: 300vh 0 0 0;
-        margin-bottom: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .space{
-        padding: 1000px auto;
-    }
-    .img-yo{
-        height: 320px;
-        width: 320px;
-    }
+/* =====================================
+   BUTTONS & LINKS
+   ===================================== */
+
+/* Main button (e.g., "More About Me") */
+.btn-box {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.55);
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
 }
 
-@keyframes slideRight{
+.btn-box:hover {
+    background: var(--accent-color);
+    color: #050509;
+    box-shadow: 0 0 18px rgba(255, 23, 68, 0.95);
+    transform: translateY(-1px);
+}
+
+/* =====================================
+   SOCIAL ICONS (HOME)
+   ===================================== */
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
+}
+
+.home-sci a:hover {
+    background: var(--accent-color);
+    color: #050509;
+    box-shadow: 0 0 18px rgba(255, 23, 68, 0.95);
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   GENERIC SECTIONS / CARDS
+   ===================================== */
+
+.card,
+.info-about,
+.section,
+.section-skill,
+.section-contact,
+.main-contact,
+.main-skill {
+    background: var(--card-bg);
+    border-radius: 12px;
+}
+
+/* Typography tweaks for headings */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-color);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================
+   ANIMATIONS
+   ===================================== */
+
+@keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideLeft{
+@keyframes slideLeft {
     0% {
         transform: translateX(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideTop{
+@keyframes slideTop {
     0% {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
-@keyframes slideBottom{
+@keyframes slideBottom {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 500px) {
+    .home {
+        /* stack content vertically on small screens */
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .img-yo {
+        height: 320px;
+        width: 320px;
     }
 }
