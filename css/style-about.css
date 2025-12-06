@@ -141,61 +141,6 @@ body {
    REUSABLE COMPONENTS
    ===================================== */
 
-/* Generic cards / sections background */
-.card,
-.info-about,
-.section,
-.section-skill,
-.section-contact,
-.main-contact,
-.main-skill {
-    background: var(--card-bg);
-    border-radius: 12px;
-}
-
-/* Main button style (if used in About page) */
-.btn-box {
-    border: 2px solid var(--accent-color);
-    background: var(--accent-color);
-    color: #ffffff;
-    box-shadow: 0 0 18px rgba(255, 23, 68, 0.85);
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 999px;
-    display: inline-block;
-    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-}
-
-.btn-box:hover {
-    background: transparent;
-    color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(255, 23, 68, 0.95);
-    transform: translateY(-1px);
-}
-
-/* Social icons (if reused here) */
-.home-sci a {
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
-    background: transparent;
-    box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
-}
-
-.home-sci a:hover {
-    background: var(--accent-color);
-    color: var(--accent-contrast);
-    box-shadow: 0 0 22px rgba(255, 23, 68, 0.95);
-    transform: translateY(-2px);
-}
 
 /* Headings look slightly glowing */
 h1,

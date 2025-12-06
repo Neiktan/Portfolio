@@ -108,13 +108,15 @@ body {
 
 /* Sections wrapper */
 .web article,
-.cybersecurity article {
+.cybersecurity article,
+.projects article {
     margin: 10px 20px;
 }
 
 /* Section headers (Web / Cyber) with red band */
 .section-web,
-.section-cyber {
+.section-cyber,
+.section-projects {
     background-color: var(--accent-color);
     text-align: center;
     color: #ffffff;
@@ -137,78 +139,40 @@ body {
 }
 
 /* Container that holds web technologies / skill cards */
-.stuff-web {
+.stuff-web, .stuff-security, .projects article{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* =====================================
-   BUTTONS (REUSABLE)
-   ===================================== */
+/* SECTION - PROJECTS */
 
-.btn-box {
-    border: 2px solid var(--accent-color);
-    background: var(--accent-color);
-    color: #ffffff;
-    box-shadow: 0 0 18px rgba(255, 23, 68, 0.85);
+.portfolio-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Links inside portfolio items */
+.portfolio-item a {
+    color: var(--accent-color);
     text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 999px;
-    display: inline-block;
-    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-weight: 500;
 }
 
-.btn-box:hover {
-    background: transparent;
-    color: var(--accent-color);
-    box-shadow: 0 0 20px rgba(255, 23, 68, 0.95);
-    transform: translateY(-1px);
+.portfolio-item a:hover {
+    text-decoration: underline;
 }
 
 /* =====================================
-   SOCIAL ICONS (IF USED HERE)
+   HEADINGS
    ===================================== */
-
-.home-sci a {
-    border: 2px solid var(--accent-color);
-    color: var(--accent-color);
-    background: transparent;
-    box-shadow: 0 0 12px rgba(255, 23, 68, 0.6);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
-}
-
-.home-sci a:hover {
-    background: var(--accent-color);
-    color: var(--accent-contrast);
-    box-shadow: 0 0 22px rgba(255, 23, 68, 0.95);
-    transform: translateY(-2px);
-}
-
-/* =====================================
-   GENERIC SECTIONS / CARDS
-   ===================================== */
-
-.card,
-.info-about,
-.section,
-.section-skill,
-.section-contact,
-.main-contact,
-.main-skill {
-    background: var(--card-bg);
-    border-radius: 12px;
-}
-
-/* Headings look slightly glowing */
 h1,
 h2,
 h3,
